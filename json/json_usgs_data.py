@@ -18,7 +18,7 @@ def main():
 
   print("URL Status code is: " + str(requrl.status_code))
   if requrl.status_code == 200:
-    wget.download(url, geofile)
+    open('geojson_requests.json', 'wb').write(requrl.content)
   else:
     print("Error occured while attempting to access URL, error code: " + str(requrl.status_code))
 
