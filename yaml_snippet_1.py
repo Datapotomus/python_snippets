@@ -11,4 +11,6 @@ with open('data.yaml') as file:
             # print(key, "->", v)
 
             if key == key_lookup:
-                print(key, "-->", v[0])
+                print(key, "-->", v)
+    
+    print(yaml.dump(file, stream))
